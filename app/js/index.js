@@ -35,3 +35,16 @@ function showPopover(event) {
 }
 
 document.addEventListener("click", showPopover);
+
+// pick it
+
+var modalpickit = document.querySelector(".modalpickit");
+var modalOuterpickit = document.querySelector(".modalpickit-outer");
+
+function showPopoverpickit(eventpickit) {
+  if (!eventpickit.target.matches(".pickit, .closerpickit")) return;
+  modalOuterpickit.classList.toggle("open");
+  eventpickit.preventDefault();
+}
+
+document.addEventListener("click", showPopoverpickit);
